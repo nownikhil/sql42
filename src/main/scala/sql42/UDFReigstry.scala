@@ -1,11 +1,7 @@
 package sql42
 
-class UDFReigstry {
+object UDFReigstry {
 
-}
-
-trait Function1UDF[A, B] {
-  def f(a: A): B
 }
 
 class ArrayContains {
@@ -14,4 +10,11 @@ class ArrayContains {
 
 class isNull {
   def f[T](a: T): T = a
+}
+
+class MySum() {
+  def init = 0
+  def add(accumulator: Int, v: Int): Int = accumulator + v
+  def merge(accumulator0: Int, accumulator1: Int): Int = accumulator0 + accumulator1
+  def result(accumulator: Int): Int = accumulator
 }
